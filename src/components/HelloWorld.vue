@@ -1,19 +1,56 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <button @click="count++">count is: {{ count }}</button>
-  <p>Edit <code>components/HelloWorld.vue</code> to test hot module replacement.</p>
+  <div>
+    <ol>
+      <li @click="skip(item)" v-for="item in list" :key="item.name">{{item.meta.title}}</li>
+    </ol>
+  </div>
 </template>
 
 <script>
+// 路由合成API
+// https://next.router.vuejs.org/guide/advanced/composition-api.html
+import { useRouter, useRoute } from 'vue-router'
+// import Router from '../router/index'
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  data() {
+  /*   data() {
     return {
-      count: 0
+      list:Router.options.routes
     }
+  },
+  methods:{
+    skip(router){
+      this.$router.push({
+        name:router.name
+      })
+    }
+  } */
+  setup() {
+    const router = useRouter()
+    const route = useRoute()
+    let list = router.options.routes
+    function skip(row) {
+      router.push({
+        name: row.name
+        // query: {
+        //   ...route.query
+        // }
+      })
+    }
+    return { list, skip }
   }
 }
 </script>
+<style scoped>
+ol {
+  text-align: left;
+}
+ol li {
+  cursor: pointer;
+}
+ol li:hover {
+  font-weight: bold;
+  color: #11bb74;
+  text-decoration: underline;
+}
+</style>
