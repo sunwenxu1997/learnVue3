@@ -59,3 +59,9 @@ vue是如何决定是否需要添加`.value`的？--- 根据ref类型特有的 `
 **应用场景：**
 
 一般情况下使用 ref和reactive 即可，只有在需要监听的数据量比较大时才使用 `shallow...`
+
+**toRow**用于解决一些操作不需要更新UI界面，直接拿到它的原始数据，类似于数据拷贝
+如果想通过toRaw拿到ref类型的原始数据，需要通过.value才能获取到
+
+**markRow**不允许数据被更新 obj=markRow(obj) reactive(obj)
+

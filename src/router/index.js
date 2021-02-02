@@ -53,6 +53,18 @@ const router = createRouter({
             name: 'learn7',
             component: () => import('../components/learn7.vue'),
             meta: { title: 'ref的本质' }
+        },
+        {
+            path: '/learn8',
+            name: 'learn8',
+            component: () => import('../components/learn8.vue'),
+            meta: { title: 'watchEffect与watch' }
+        },
+        {
+            path: '/other',
+            name: 'other',
+            component: () => import('../components/other.vue'),
+            meta: { title: '例子' }
         }
     ]
 });
