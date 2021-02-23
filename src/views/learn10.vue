@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>123</h1>
-    <button @click="change">change</button>
+    <button @click="change">颜色改变</button>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style>
+/* https://github.com/vuejs/rfcs/pull/231 */
 h1 {
   color: v-bind(color);
 }

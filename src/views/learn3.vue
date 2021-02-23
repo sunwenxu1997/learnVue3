@@ -19,9 +19,9 @@
 <script>
 /* 此种设计避免了vue2中数据分散问题，实现了模块化管理 */
 /* 引入添加的方法 */
-import useAddStudent from './js/addStu'
+import useAddStudent from '../utils/addStu'
 /* 引入移除的方法 */
-import useRemoveStudent from './js/remStu'
+import useRemoveStudent from '../utils/remStu'
 export default {
   setup() {
     let { state, remStu } = useRemoveStudent()

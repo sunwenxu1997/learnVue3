@@ -29,12 +29,15 @@ export default {
     const router = useRouter()
     const route = useRoute()
     let list = router.options.routes
+    if (list[0].path === '/') {
+      list.shift()
+    }
     function skip(row) {
       router.push({
-        name: row.name
-        // query: {
-        //   ...route.query
-        // }
+        name: row.name,
+        query: {
+          params: 123
+        }
       })
     }
     return { list, skip }

@@ -1,5 +1,5 @@
 <template>
- <h2>{{num}}</h2>
+  <h2>{{num}}</h2>
 </template>
 
 <script>
@@ -12,11 +12,6 @@
 // 访问侦听状态变化前后的值。
 import { ref, onMounted, watch, watchEffect } from 'vue'
 export default {
-  data() {
-    return {
-      itemRefs: []
-    }
-  },
   methods: {},
   setup() {
     let num = ref(5)

@@ -1,6 +1,5 @@
 
 import { createRouter, createWebHistory } from 'vue-router';
-
 const routerHistory = createWebHistory();
 
 const router = createRouter({
@@ -12,60 +11,86 @@ const router = createRouter({
             component: () => import('../components/HelloWorld.vue'),
             meta: { title: '首页' }
         },
+
         {
             path: '/learn1',
             name: 'learn1',
-            component: () => import('../components/learn1.vue'),
+            component: () => import('../views/learn1.vue'),
             meta: { title: '什么是组合API，初步了解' }
         },
         {
             path: '/learn2',
             name: 'learn2',
-            component: () => import('../components/learn2.vue'),
+            component: () => import('../views/learn2.vue'),
             meta: { title: '组合API，代码抽离' }
         },
         {
             path: '/learn3',
             name: 'learn3',
-            component: () => import('../components/learn3.vue'),
+            component: () => import('../views/learn3.vue'),
             meta: { title: '代码模块化，使代码看起来更加简洁' }
         },
         {
             path: '/learn4',
             name: 'learn4',
-            component: () => import('../components/learn4.vue'),
+            component: () => import('../views/learn4.vue'),
             meta: { title: 'vue2编写方式和vue3编写方式的混合使用' }
         },
         {
             path: '/learn5',
             name: 'learn5',
-            component: () => import('../components/learn5.vue'),
+            component: () => import('../views/learn5.vue'),
             meta: { title: 'setup执行时机和注意点' }
         },
         {
             path: '/learn6',
             name: 'learn6',
-            component: () => import('../components/learn6.vue'),
+            component: () => import('../views/learn6.vue'),
             meta: { title: 'reactive使用的注意点' }
         },
         {
             path: '/learn7',
             name: 'learn7',
-            component: () => import('../components/learn7.vue'),
+            component: () => import('../views/learn7.vue'),
             meta: { title: 'ref的本质' }
         },
         {
             path: '/learn8',
             name: 'learn8',
-            component: () => import('../components/learn8.vue'),
+            component: () => import('../views/learn8.vue'),
             meta: { title: 'watchEffect与watch' }
         },
+        {
+            path: '/learn9',
+            name: 'learn9',
+            component: () => import('../views/learn9.vue'),
+            meta: { title: '路由参数传递和接收' }
+        },
+        {
+            path: '/learn10',
+            name: 'learn10',
+            component: () => import('../views/learn10.vue'),
+            meta: { title: 'css样式根据变量改变,v-bind(color)' }
+        },
+        {
+            path: '/learn11',
+            name: 'learn11',
+            component: () => import('../views/learn11.vue'),
+            meta: { title: '渲染函数 render h' }
+        },
+        {
+            path: '/learn12',
+            name: 'learn12',
+            component: () => import('../views/learn12.vue'),
+            meta: { title: '父子组件数据双向绑定 v-model' }
+        },
+
         {
             path: '/other',
             name: 'other',
             component: () => import('../components/other.vue'),
-            meta: { title: '例子' }
-        }
+            meta: { title: '其他' }
+        },
     ]
 });
 router.beforeEach((to, from) => {
