@@ -91,6 +91,12 @@ const router = createRouter({
             meta: { title: '父子组件传值 $ref的使用' }
         },
         {
+            path: '/learn14',
+            name: 'learn14',
+            component: () => import('../views/learn14.vue'),
+            meta: { title: '新特性 <teleport> 标签UI' }
+        },
+        {
             path: '/other',
             name: 'other',
             component: () => import('../components/other.vue'),
