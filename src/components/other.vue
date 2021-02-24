@@ -1,27 +1,13 @@
 <template>
-  <div>
-    <h1>123</h1>
-    <button @click="change">change</button>
-  </div>
+  
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      color: 'red'
-    }
-  },
-  methods: {
-    change() {
-      this.color = 'yellow'
-    }
-  }
+
 }
 </script>
 
 <style>
-h1 {
-  color: v-bind(color);
-}
+
 </style>

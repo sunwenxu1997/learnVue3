@@ -84,7 +84,12 @@ const router = createRouter({
             component: () => import('../views/learn12.vue'),
             meta: { title: '父子组件数据双向绑定 v-model' }
         },
-
+        {
+            path: '/learn13',
+            name: 'learn13',
+            component: () => import('../views/learn13.vue'),
+            meta: { title: '父子组件传值 $ref的使用' }
+        },
         {
             path: '/other',
             name: 'other',

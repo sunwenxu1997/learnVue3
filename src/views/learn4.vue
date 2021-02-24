@@ -9,7 +9,8 @@
 
 <script>
 /* Composition API 和 Opation API 混合使用 vue2编写方式和vue3编写方式的混合使用
-Composition API本质(组合API/注入API)
+Composition API本质(组合API/选项API)
+组合式 API  与选项式 API
 */
 import { ref } from 'vue'
 export default {
